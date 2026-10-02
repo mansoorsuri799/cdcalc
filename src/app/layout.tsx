@@ -60,15 +60,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=2", type: "image/x-icon", sizes: "48x48" },
-      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
-      { url: "/favicon-32x32.png?v=2", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=2", type: "image/png", sizes: "16x16" },
-      { url: "/android-chrome-192x192.png?v=2", type: "image/png", sizes: "192x192" },
-      { url: "/logo-icon-512.png?v=2", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=3", type: "image/x-icon", sizes: "48x48" },
+      { url: "/favicon.svg?v=3", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png?v=3", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=3", type: "image/png", sizes: "16x16" },
+      { url: "/android-chrome-192x192.png?v=3", type: "image/png", sizes: "192x192" },
+      { url: "/logo-icon-512.png?v=3", type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/apple-touch-icon.png?v=2", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon.ico?v=2", type: "image/x-icon" }],
+    apple: [{ url: "/apple-touch-icon.png?v=3", sizes: "180x180" }],
+    shortcut: [{ url: "/favicon.ico?v=3", type: "image/x-icon" }],
   },
   alternates: {
     canonical: SITE_ORIGIN,
@@ -117,11 +117,11 @@ export default function RootLayout({
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" sizes="48x48" />
-        <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
-        <link rel="icon" href="/favicon-32x32.png?v=2" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon-16x16.png?v=2" type="image/png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" sizes="180x180" />
+        <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon" sizes="48x48" />
+        <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png?v=3" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png?v=3" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180" />
         <Script id="deferred-manifest" strategy="lazyOnload">
           {`(function(){var l=document.createElement('link');l.rel='manifest';l.href='/manifest.json';document.head.appendChild(l);})();`}
         </Script>
