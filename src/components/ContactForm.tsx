@@ -51,7 +51,7 @@ export default function ContactForm() {
           <input
             id="name"
             type="text"
-            className={`w-full px-4 py-2 bg-primary-light border ${
+            className={`w-full px-4 py-2 bg-[#071824] border ${
               errors.name ? 'border-red-500' : 'border-gray-700'
             } rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent`}
             placeholder="John Doe"
@@ -69,7 +69,7 @@ export default function ContactForm() {
           <input
             id="email"
             type="email"
-            className={`w-full px-4 py-2 bg-primary-light border ${
+            className={`w-full px-4 py-2 bg-[#071824] border ${
               errors.email ? 'border-red-500' : 'border-gray-700'
             } rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent`}
             placeholder="john@example.com"
@@ -93,7 +93,7 @@ export default function ContactForm() {
           <input
             id="subject"
             type="text"
-            className={`w-full px-4 py-2 bg-primary-light border ${
+            className={`w-full px-4 py-2 bg-[#071824] border ${
               errors.subject ? 'border-red-500' : 'border-gray-700'
             } rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent`}
             placeholder="How can we help?"
@@ -111,7 +111,7 @@ export default function ContactForm() {
           <textarea
             id="message"
             rows={5}
-            className={`w-full px-4 py-2 bg-primary-light border ${
+            className={`w-full px-4 py-2 bg-[#071824] border ${
               errors.message ? 'border-red-500' : 'border-gray-700'
             } rounded-md text-white focus:outline-none focus:ring-2 focus:ring-accent`}
             placeholder="Your message here..."

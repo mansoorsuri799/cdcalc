@@ -4,16 +4,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import MobileNavigation from './MobileNavigation';
+import { BRAND_LOGO, SITE_NAME } from '@/lib/siteConfig';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/download-card-rummy', label: 'Download' },
-  { href: '/deposit-money-in-card-rummy', label: 'Deposit' },
-  { href: '/withdraw-money-from-card-rummy', label: 'Withdraw' },
-  { href: '/card-rummy-for-pc', label: 'PC Version' },
-  { href: '/about-us', label: 'About Us' },
+  { href: '/', label: 'Calculator' },
+  { href: '/roth-ira-contribution-limits', label: 'Limits' },
+  { href: '/roth-ira-eligibility', label: 'Eligibility' },
+  { href: '/roth-vs-traditional-ira', label: 'Roth vs Traditional' },
+  { href: '/about-us', label: 'About' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact-us', label: 'Contact Us' },
+  { href: '/contact-us', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -25,33 +25,31 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-primary py-3 px-4 md:px-8 sticky top-0 z-30 border-b border-gray-800">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <div className="relative h-10 w-10 mr-2">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#05070c]/95 py-2 px-3 sm:py-3 sm:px-4 md:px-8">
+      <div className="container mx-auto flex justify-between items-center gap-3">
+        <Link href="/" className="flex items-center min-w-0">
+          <div className="relative h-8 w-8 sm:h-9 sm:w-9 mr-2 flex-shrink-0">
             <Image
-              src="/card-rummy.webp"
-              alt="Card Rummy Logo"
+              src={BRAND_LOGO}
+              alt="Roth IRA Calculator logo"
               width={40}
               height={40}
               className="object-contain"
-              priority={true}
+              priority
               fetchPriority="high"
             />
           </div>
-          <span className="text-accent text-xl md:text-2xl font-bold">
-            Card Rummy
+          <span className="truncate text-sm sm:text-base md:text-lg font-bold leading-tight text-white">
+            {SITE_NAME}
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden lg:flex space-x-6">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`relative font-medium transition-colors pb-1 group ${
+              className={`relative font-medium transition-colors pb-1 group text-sm ${
                 isActive(href)
                   ? 'text-accent'
                   : 'text-white hover:text-accent'
@@ -67,9 +65,8 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Navigation */}
         <MobileNavigation />
       </div>
     </header>
   );
-} 
+}

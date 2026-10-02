@@ -7,12 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          'Helvetica',
+          'Helvetica Neue',
+          'Arial',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+        ],
+      },
       colors: {
-        primary: '#06091F',
-        accent: '#FFC107',
+        primary: '#05070c',
+        secondary: '#0b1018',
+        accent: '#2DD4BF',
       },
     },
   },
   plugins: [],
 }
-

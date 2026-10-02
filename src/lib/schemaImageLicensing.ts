@@ -1,22 +1,17 @@
-/** Site origin for absolute schema URLs */
-export const SITE_ORIGIN = "https://cardrummyapp.com.pk";
+import { SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
 
-/** Schema.org Organization node reused as creator across ImageObjects */
+export { SITE_ORIGIN };
+
 export const IMAGE_CREATOR = {
   "@type": "Organization",
-  name: "Card Rummy",
+  name: SITE_NAME,
   url: SITE_ORIGIN,
 } as const;
 
-/**
- * Full set of Schema.org ImageObject properties recommended by Google for
- * Image Metadata (Search Console: license, creator, acquireLicensePage,
- * copyrightNotice, creditText).
- */
 export const imageObjectLicensing = {
   license: SITE_ORIGIN,
   creator: IMAGE_CREATOR,
   acquireLicensePage: `${SITE_ORIGIN}/contact-us`,
-  copyrightNotice: "© Card Rummy. All rights reserved.",
-  creditText: "Card Rummy",
+  copyrightNotice: `© ${SITE_NAME}. All rights reserved.`,
+  creditText: SITE_NAME,
 } as const;

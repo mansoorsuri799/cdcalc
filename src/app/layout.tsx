@@ -1,15 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  variable: "--font-poppins",
-  preload: true,
-});
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DeferredStyles from "@/components/DeferredStyles";
@@ -18,121 +9,102 @@ import WebVitalsTracker from "@/components/WebVitalsTracker";
 import DeferredAnalytics from "@/components/DeferredAnalytics";
 import { MobileMenuProvider } from "@/components/MobileMenuProvider";
 import { ORGANIZATION_JSON_LD } from "@/lib/appFacts";
+import {
+  OG_IMAGE,
+  SITE_NAME,
+  SITE_ORIGIN,
+  SITE_TAGLINE,
+  TWITTER_IMAGE,
+} from "@/lib/siteConfig";
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#06091F",
+  themeColor: "#05070c",
   viewportFit: "cover",
   interactiveWidget: "resizes-visual",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cardrummyapp.com.pk'),
+  metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: "Card Rummy Pakistan v1.231 Free Download Official APK",
-    template: "%s | Card Rummy"
+    default: "Roth IRA Calculator (2026)",
+    template: `%s | ${SITE_NAME}`,
   },
-  description: "Card Rummy 2026 - Pakistan's #1 card game platform. Download Card Rummy APK, play Teen Patti, Rummy, Dragon vs Tiger & win real cash. Fast withdrawals via JazzCash & EasyPaisa. Join 500K+ players!",
+  description: SITE_TAGLINE,
   keywords: [
-    "Card Rummy",
-    "card rummy game",
-    "card rummy download",
-    "card rummy app",
-    "card rummy apk",
-    "card rummy pakistan",
-    "card rummy online",
-    "download card rummy",
-    "card rummy real money",
-    "3 Patti Card Rummy",
-    "how to play card rummy",
-    "card rummy 2026",
-    "Pakistan card games",
-    "Teen Patti game",
-    "online rummy game",
-    "earn money playing cards",
-    "Android gaming app 2026",
-    "JazzCash gaming",
-    "EasyPaisa gaming",
-    "mobile card games",
-    "real money games Pakistan",
-    "card game earning app",
-    "Teen Patti online",
-    "Dragon vs Tiger",
-    "best earning app Pakistan",
-    "rummy card game",
-    "play rummy online",
-    "rummy game download"
+    "Roth IRA calculator",
+    "Roth IRA",
+    "Roth IRA contribution limits 2026",
+    "Roth IRA income limits",
+    "Roth vs Traditional IRA",
+    "retirement calculator",
+    "tax-free growth",
+    "backdoor Roth IRA",
   ],
-  authors: [{ name: "Card Rummy Team" }],
-  creator: "Card Rummy",
-  publisher: "Card Rummy",
+  authors: [{ name: `${SITE_NAME} Team` }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon', sizes: '256x256' },
-      { url: '/card-rummy.webp', type: 'image/webp', sizes: '512x512' }
+      { url: "/favicon.ico?v=2", type: "image/x-icon", sizes: "48x48" },
+      { url: "/favicon.svg?v=2", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=2", type: "image/png", sizes: "16x16" },
+      { url: "/android-chrome-192x192.png?v=2", type: "image/png", sizes: "192x192" },
+      { url: "/logo-icon-512.png?v=2", type: "image/png", sizes: "512x512" },
     ],
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180' }
-    ],
-    shortcut: [
-      { url: '/favicon.ico', type: 'image/x-icon' }
-    ]
+    apple: [{ url: "/apple-touch-icon.png?v=2", sizes: "180x180" }],
+    shortcut: [{ url: "/favicon.ico?v=2", type: "image/x-icon" }],
   },
   alternates: {
-    canonical: "https://cardrummyapp.com.pk",
+    canonical: SITE_ORIGIN,
   },
   openGraph: {
-    title: "Card Rummy Pakistan v1.231 Free Download Official APK",
-    description: "Card Rummy 2026 - Pakistan's #1 card game platform. Join 500K+ players. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
-    url: "https://cardrummyapp.com.pk",
-    siteName: "Card Rummy",
+    title: "Roth IRA Calculator (2026)",
+    description: SITE_TAGLINE,
+    url: SITE_ORIGIN,
+    siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://cardrummyapp.com.pk/feature/og-image.webp",
-        width: 512,
-        height: 512,
-        alt: "Card Rummy - Premier Card Gaming Platform",
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Roth IRA Calculator — free retirement growth projections",
       },
-      {
-        url: "https://cardrummyapp.com.pk/feature/og-image-square.webp",
-        width: 512,
-        height: 512,
-        alt: "Card Rummy - Premier Card Gaming Platform",
-      }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Card Rummy Pakistan v1.231 Free Download Official APK",
-    description: "Card Rummy 2026 - Pakistan's #1 card game platform. Join 500K+ players. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!",
+    title: "Roth IRA Calculator (2026)",
+    description: SITE_TAGLINE,
     images: [
       {
-        url: "https://cardrummyapp.com.pk/feature/twitter-card.webp",
-        width: 512,
-        height: 512,
-        alt: "Card Rummy - Premier Card Gaming Platform",
-      }
+        url: TWITTER_IMAGE,
+        width: 1200,
+        height: 628,
+        alt: "Roth IRA Calculator — free retirement growth projections",
+      },
     ],
   },
-  applicationName: "Card Rummy",
-  category: "Gaming",
-  classification: "Card Gaming Platform",
+  applicationName: SITE_NAME,
+  category: "Finance",
+  classification: "Retirement Calculator",
 };
 
 export default function RootLayout({
@@ -141,35 +113,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="/card-rummy.webp" type="image/webp" sizes="512x512" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
-        
-        {/* Defer manifest to avoid critical path (374ms latency) - load after page interactive */}
+        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" sizes="48x48" />
+        <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png?v=2" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png?v=2" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" sizes="180x180" />
         <Script id="deferred-manifest" strategy="lazyOnload">
           {`(function(){var l=document.createElement('link');l.rel='manifest';l.href='/manifest.json';document.head.appendChild(l);})();`}
         </Script>
       </head>
       <body
-        className={`${poppins.className} antialiased bg-primary text-white min-h-screen flex flex-col`}
+        className="font-sans antialiased bg-primary text-zinc-100 min-h-screen flex flex-col"
         style={{
-          backgroundImage: "radial-gradient(circle at 10% 20%, rgba(10, 16, 41, 0.4) 0%, rgba(6, 9, 31, 0.01) 90%)",
+          backgroundColor: "#05070c",
+          backgroundImage:
+            "radial-gradient(circle at 15% 0%, rgba(45, 212, 191, 0.04) 0%, transparent 40%)",
           backgroundAttachment: "fixed",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
         suppressHydrationWarning
       >
-        <div className="stars-bg fixed inset-0 z-0 opacity-20"></div>
         <MobileMenuProvider>
           <Header />
-          <main className="relative z-10">
-          {children}
-          </main>
+          <main className="relative z-10 flex-1">{children}</main>
           <DeferredStyles />
           <Footer />
           <ScrollToTopWrapper />

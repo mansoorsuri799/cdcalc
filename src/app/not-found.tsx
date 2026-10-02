@@ -1,24 +1,25 @@
-import { Metadata } from 'next';
-import CtaButton from '@/components/CtaButton';
+import Link from "next/link";
+import { Metadata } from "next";
+import CtaButton from "@/components/CtaButton";
 
 export const metadata: Metadata = {
-  title: 'Page Not Found - Card Rummy',
-  description: 'The page you are looking for does not exist. Return to Card Rummy homepage.',
-  robots: {
-    index: false,
-    follow: true,
-  },
+  title: "Page Not Found",
+  description: "The page you are looking for does not exist. Return to the Roth IRA Calculator.",
 };
 
 export default function NotFound() {
   return (
-    <div className="container mx-auto px-4 py-16 text-center">
-      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-accent">404</h1>
-      <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Page Not Found</h2>
-      <p className="text-lg mb-8 text-gray-300 max-w-lg mx-auto">
-        The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+    <div className="container mx-auto px-4 py-20 text-center max-w-xl">
+      <h1 className="text-4xl font-bold text-white mb-4">Page not found</h1>
+      <p className="text-gray-300 mb-8">
+        That URL is not available. Head back to the free Roth IRA calculator or browse our guides.
       </p>
-      <CtaButton href="/" icon="arrow">Return to Homepage</CtaButton>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <CtaButton href="/">OPEN CALCULATOR</CtaButton>
+        <Link href="/blog" className="text-accent hover:underline self-center">
+          Visit the blog
+        </Link>
+      </div>
     </div>
   );
-} 
+}

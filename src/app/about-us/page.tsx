@@ -1,164 +1,85 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import Script from 'next/script';
-import { FACEBOOK_PROFILE_URL } from '@/lib/appFacts';
-import CtaButton from '@/components/CtaButton';
+import Image from "next/image";
+import Link from "next/link";
+import { Metadata } from "next";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import CtaButton from "@/components/CtaButton";
+import { BRAND_LOGO, CONTACT_EMAIL, SITE_DOMAIN, SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: 'About Card Rummy - Pakistan\'s Premier Card Gaming Platform',
-  description: 'Learn about Card Rummy, our history, mission, and vision for creating the best card gaming platform in Pakistan with Teen Patti, Rummy and more.',
-  keywords: ['Card Rummy about', 'about us', 'gaming company Pakistan', 'Card Rummy history', 'card gaming platform', 'Teen Patti', '3 Patti'],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: "https://cardrummyapp.com.pk/about-us",
-  },
+  title: "About Roth IRA Calculator — Our Mission",
+  description:
+    "Learn why RothIRA Calc exists: clear retirement math, current IRS limit context, and a free Roth IRA calculator without signup walls.",
+  alternates: { canonical: `${SITE_ORIGIN}/about-us` },
   openGraph: {
-    title: 'About Card Rummy - Pakistan\'s Premier Card Gaming Platform',
-    description: 'Learn about Card Rummy, our history, mission, and vision for creating the best card gaming platform in Pakistan with real cash rewards.',
-    url: "https://cardrummyapp.com.pk/about-us",
-    siteName: "Card Rummy",
-    locale: "en_US",
+    title: "About Roth IRA Calculator — Our Mission",
+    description: "Independent educational tools for Roth IRA planning on rothiracalc.net.",
+    url: `${SITE_ORIGIN}/about-us`,
+    siteName: SITE_NAME,
     type: "website",
-    images: [
-      {
-        url: "https://cardrummyapp.com.pk/feature/og-image.webp",
-        width: 512,
-        height: 512,
-        alt: "About Card Rummy - Premier Card Gaming Platform",
-      }
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: 'About Card Rummy - Pakistan\'s Premier Card Gaming Platform',
-    description: 'Learn about Card Rummy, our history, mission, and vision for creating the best card gaming platform in Pakistan with real cash rewards.',
-    images: ["https://cardrummyapp.com.pk/feature/twitter-card.webp"],
   },
 };
 
 export default function AboutPage() {
   return (
-    <article className="min-h-screen bg-primary py-12 px-4">
-      <div className="container mx-auto">
-        <div className="max-w-4xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About Us</h1>
-          </div>
-          
-          {/* Main Content */}
-          <div className="bg-secondary rounded-2xl shadow-xl p-8 md:p-12 mb-12">
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-20 mb-8">
-              <div className="w-full md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
-                <Link href="/" className="block">
-                  <div className="relative w-[280px] h-[280px] md:w-[320px] md:h-[320px] mx-auto md:mx-0 rounded-lg overflow-hidden bg-[#0A1029]">
-                    <Image 
-                      src="/card-rummy.webp" 
-                      alt="Card Rummy – Pakistan's Premier Card Gaming Platform"
-                      title="About Card Rummy – Pakistan's #1 Card Game App"
-                      width={320}
-                      height={320}
-                      sizes="(max-width: 768px) 280px, 320px"
-                      className="object-contain p-4 w-full h-full"
-                      priority
-                    />
-                  </div>
-                </Link>
-              </div>
-              <div className="md:w-2/3 md:pl-4 lg:pl-6">
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                    Welcome to <a href="https://www.cardrummyapp.com.pk/" className="text-accent hover:text-accent font-semibold" target="_blank" rel="noopener noreferrer">www.cardrummyapp.com.pk</a>, a trusted platform to provide the latest information about 3patti <Link href="/" className="text-accent hover:underline font-semibold">Card Rummy</Link>. This is one of the most popular online casino games in Pakistan, having <span className="font-bold text-accent">500K+ users</span>. <a href="https://pkcardrummy.com/?from_gameid=6276686&channelCode=6191689" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-semibold">Download Card Rummy</a> now to join thousands of players earning real cash rewards.
-                  </p>
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    Hundreds of people are playing these wonderful games and earning a handsome amount on a daily or weekly basis.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Our Aim Section */}
-          <div className="bg-gradient-to-r from-orange-600 to-orange-500 rounded-2xl shadow-xl p-8 md:p-12 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white text-center">Our Aim!</h2>
-            <p className="text-lg md:text-xl text-white leading-relaxed text-center">
-              Our aim is to provide the users with the latest and updated information and earning tips about Card Rummy. For any type of information or query, you can visit our <Link href="/contact-us" className="underline hover:text-orange-100 font-semibold">contact us page</Link>.
-            </p>
-          </div>
-          
-          {/* Contact CTA */}
-          <div className="bg-secondary rounded-2xl shadow-xl p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4 text-white">Have Questions?</h2>
-            <p className="text-gray-300 mb-6 text-lg">
-              We're here to help! Contact our team for any information or queries about Card Rummy.
-            </p>
-            <CtaButton href="/contact-us" icon="arrow">Contact Us</CtaButton>
-          </div>
+    <div className="container mx-auto px-4 py-10 max-w-4xl">
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About Us" }]} />
+      <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
+        <div className="relative w-40 h-40 flex-shrink-0 rounded-2xl overflow-hidden border border-slate-700 bg-secondary">
+          <Image
+            src={BRAND_LOGO}
+            alt="Roth IRA Calculator logo"
+            fill
+            sizes="160px"
+            className="object-contain p-3"
+            priority
+          />
+        </div>
+        <div>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">About {SITE_NAME}</h1>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            {SITE_NAME} is an independent educational site at {SITE_DOMAIN}. We built a free Roth IRA
+            calculator so savers can project tax-free growth, check contribution room, and understand
+            income limits without creating an account or talking to a salesperson first.
+          </p>
+          <p className="text-gray-300 leading-relaxed">
+            Our pages explain contribution caps, eligibility, Roth vs Traditional tradeoffs, and
+            common strategies like the backdoor Roth—always with the reminder that tax rules are
+            personal and professional advice may be needed.
+          </p>
         </div>
       </div>
 
-      <Script
-        id="about-page-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Card Rummy",
-              "alternateName": "3 Patti Card Rummy",
-              "url": "https://cardrummyapp.com.pk",
-              "logo": "https://cardrummyapp.com.pk/card-rummy.webp",
-              "description": "Card Rummy is Pakistan's premier card gaming platform, offering Teen Patti, Rummy, Dragon vs Tiger and more with real cash rewards.",
-              "foundingDate": "2024",
-              "foundingLocation": {
-                "@type": "Country",
-                "name": "Pakistan"
-              },
-              "sameAs": [
-                FACEBOOK_PROFILE_URL
-              ],
-              "founder": {
-                "@type": "Person",
-                "name": "Erio Card Rummy Dev"
-              }
-            },
-            "about": {
-              "@type": "Thing",
-              "name": "Card Gaming Platform",
-              "description": "Online card gaming platform with real cash rewards serving Pakistani users"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "https://cardrummyapp.com.pk/about-us"
-            }
-          })
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cardrummyapp.com.pk" },
-              { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://cardrummyapp.com.pk/about-us" }
-            ]
-          })
-        }}
-      />
-    </article>
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-accent mb-3">What we publish?</h2>
+        <ul className="space-y-3 text-gray-300">
+          <li className="rounded-xl border border-slate-700 bg-secondary p-4">
+            A working retirement projection tool with MAGI-aware contribution checks
+          </li>
+          <li className="rounded-xl border border-slate-700 bg-secondary p-4">
+            Practical guides for limits, eligibility, and account comparisons
+          </li>
+          <li className="rounded-xl border border-slate-700 bg-secondary p-4">
+            SERP-focused articles on openings, withdrawals, backdoor Roth, and 401(k) tradeoffs
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-accent mb-3">Contact</h2>
+        <p className="text-gray-300 leading-relaxed">
+          Questions or corrections? Email{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`} className="text-accent hover:underline">
+            {CONTACT_EMAIL}
+          </a>{" "}
+          or use our{" "}
+          <Link href="/contact-us" className="text-accent hover:underline">
+            contact form
+          </Link>
+          .
+        </p>
+      </section>
+
+      <CtaButton href="/#calculator">TRY THE CALCULATOR</CtaButton>
+    </div>
   );
-} 
+}

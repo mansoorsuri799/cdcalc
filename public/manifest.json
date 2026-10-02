@@ -1,22 +1,32 @@
 {
-  "name": "Card Rummy",
-  "short_name": "Card Rummy",
-  "description": "Pakistan's premier card gaming platform offering Teen Patti, Rummy, Dragon vs Tiger and more. Earn real cash rewards!",
+  "name": "Roth IRA Calculator",
+  "short_name": "RothIRA Calc",
+  "description": "Free Roth IRA calculator with 2026 contribution limits, MAGI eligibility, and Roth vs taxable projections.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#06091F",
-  "theme_color": "#06091F",
+  "background_color": "#05070c",
+  "theme_color": "#05070c",
   "icons": [
     {
       "src": "/favicon.ico",
-      "sizes": "256x256",
+      "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "/card-rummy.webp",
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
-} 
+}

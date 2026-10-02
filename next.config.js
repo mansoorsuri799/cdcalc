@@ -13,76 +13,122 @@ const nextConfig = {
   
   // Optimize images
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'slotspk.com.pk',
-      },
-    ],
     formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    qualities: [75, 80, 90, 100], // Configure allowed image quality values
+    qualities: [75, 80, 90, 100],
   },
 
   async redirects() {
     return [
-      // /about was indexed by Google but the real page is /about-us
       {
         source: '/about',
         destination: '/about-us',
         permanent: true,
       },
       {
+        source: '/download-card-rummy',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/deposit-money-in-card-rummy',
+        destination: '/roth-ira-contribution-limits',
+        permanent: true,
+      },
+      {
+        source: '/withdraw-money-from-card-rummy',
+        destination: '/blog/roth-ira-5-year-rule',
+        permanent: true,
+      },
+      {
+        source: '/card-rummy-for-pc',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/blog/create-account-login',
-        destination: '/blog/create-card-rummy-account-and-login',
-        permanent: true,
-      },
-      // Malformed URLs Google crawled — send them home
-      {
-        source: '/\\$',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/\\&',
-        destination: '/',
+        destination: '/blog/how-to-open-a-roth-ira',
         permanent: true,
       },
       {
         source: '/og-image.webp',
-        destination: '/feature/og-image.webp',
+        destination: '/feature/og-image.png',
+        permanent: true,
+      },
+      {
+        source: '/og-image.png',
+        destination: '/feature/og-image.png',
         permanent: true,
       },
       {
         source: '/og-image-square.webp',
-        destination: '/feature/og-image-square.webp',
+        destination: '/feature/og-image-square.png',
         permanent: true,
       },
       {
         source: '/twitter-card.webp',
-        destination: '/feature/twitter-card.webp',
+        destination: '/feature/twitter-card.png',
+        permanent: true,
+      },
+      {
+        source: '/twitter-card.png',
+        destination: '/feature/twitter-card.png',
+        permanent: true,
+      },
+      {
+        source: '/card-rummy.webp',
+        destination: '/logo-mark-512.png',
         permanent: true,
       },
       {
         source: '/card-rummy-logo.webp',
-        destination: '/card-rummy.webp',
+        destination: '/logo-mark-512.png',
+        permanent: true,
+      },
+      {
+        source: '/roth-ira-calculator.webp',
+        destination: '/logo-mark-512.png',
+        permanent: true,
+      },
+      {
+        source: '/roth-ira-calculator-hero.png',
+        destination: '/roth-ira-tax-free-growth.webp',
+        permanent: true,
+      },
+      {
+        source: '/roth-ira-growth-chart.png',
+        destination: '/roth-ira-compound-growth.webp',
+        permanent: true,
+      },
+      {
+        source: '/roth-ira-contributions.png',
+        destination: '/roth-ira-calculator-how-it-works.webp',
+        permanent: true,
+      },
+      {
+        source: '/feature/og-image.webp',
+        destination: '/feature/og-image.png',
+        permanent: true,
+      },
+      {
+        source: '/feature/og-image-square.webp',
+        destination: '/feature/og-image-square.png',
+        permanent: true,
+      },
+      {
+        source: '/feature/twitter-card.webp',
+        destination: '/feature/twitter-card.png',
         permanent: true,
       },
     ];
   },
 
-  // Optimize static file serving
   async rewrites() {
     return [
       {
         source: '/.well-known/:path*',
         destination: '/public/.well-known/:path*',
-      },
-      // Redirect old 3Patti Blue logo to Card Rummy logo
-      {
-        source: '/3-patti-blue-logo.webp',
-        destination: '/card-rummy.webp',
       },
     ];
   },

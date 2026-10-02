@@ -1,9 +1,8 @@
 import Link from 'next/link';
 
-export const DOWNLOAD_URL =
-  'https://pkcardrummy.com/?from_gameid=6276686&channelCode=6191689';
+export const PRIMARY_CTA_HREF = '/#calculator';
 
-type IconKind = 'download' | 'arrow' | 'mail';
+type IconKind = 'download' | 'arrow' | 'mail' | 'calc';
 
 type CtaButtonProps = {
   href?: string;
@@ -32,10 +31,15 @@ const ICONS: Record<IconKind, React.ReactNode> = {
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>
   ),
+  calc: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 7h6M9 11h6M9 15h2m-5 4h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+  ),
 };
 
 const baseClass =
-  'download-btn inline-flex items-center justify-center px-8 py-4 text-white font-semibold text-lg rounded-full border-2 border-[#0BA5E9] bg-transparent hover:bg-[#0BA5E9]/10 transition-all group';
+  'download-btn inline-flex items-center justify-center px-8 py-4 text-white font-semibold text-lg rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-all group';
 
 function ButtonInner({
   children,
@@ -47,7 +51,7 @@ function ButtonInner({
   return (
     <>
       <span className="text-left leading-tight">{children}</span>
-      <div className="download-icon ml-3 bg-[#f97316] rounded-full p-2 group-hover:scale-110 transition-transform text-white">
+      <div className="download-icon ml-3 bg-accent rounded-full p-2 group-hover:scale-110 transition-transform text-black">
         {ICONS[icon]}
       </div>
     </>
@@ -55,9 +59,9 @@ function ButtonInner({
 }
 
 export default function CtaButton({
-  href = DOWNLOAD_URL,
+  href = PRIMARY_CTA_HREF,
   children,
-  icon = 'download',
+  icon = 'calc',
   onClick,
   type = 'button',
   as = 'link',

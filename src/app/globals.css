@@ -3,41 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 2, 6, 23;
-  --background-end-rgb: 2, 6, 23;
+  --foreground-rgb: 244, 244, 245;
+  --background-start-rgb: 5, 7, 12;
+  --background-end-rgb: 5, 7, 12;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: Helvetica, "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Prevent CLS by ensuring images don't shift layout */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Footer: contain layout to reduce CLS from reflow */
 footer {
   contain: layout;
 }
 
-/* Prevent font-related layout shifts */
 * {
   font-family: inherit;
 }
-
-
-/* main: no forced min-height - prevents footer from shifting when main expands late */
-
-
 
 .download-btn {
   position: relative;
@@ -61,26 +49,3 @@ footer {
     transform: translateY(-2px);
   }
 }
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.stat-card {
-  background: rgba(10, 16, 41, 0.8);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Prevent layout shift by ensuring content takes up space */
-.stars-bg {
-  pointer-events: none;
-} 
