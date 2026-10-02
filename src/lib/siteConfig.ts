@@ -8,7 +8,8 @@ export const SITE_TAGLINE =
 export const CONTACT_EMAIL = "support@rothiracalc.net";
 
 /** Brand & content images in /public */
-export const BRAND_LOGO = "/logo-mark-512.png";
+export const BRAND_LOGO = "/logo-icon-512.png";
+export const BRAND_LOGO_MARK = "/logo-mark-512.png";
 export const BRAND_LOGO_HORIZONTAL = "/logo-horizontal-white.png";
 export const BRAND_HERO = "/roth-ira-tax-free-growth.webp";
 export const BRAND_GROWTH = "/roth-ira-compound-growth.webp";
