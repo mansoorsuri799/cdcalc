@@ -30,19 +30,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
   title: {
-    default: "Roth IRA Calculator (2026)",
+    default: "Free CD Calculator — Estimate Certificate of Deposit Earnings",
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_TAGLINE,
   keywords: [
-    "Roth IRA calculator",
-    "Roth IRA",
-    "Roth IRA contribution limits 2026",
-    "Roth IRA income limits",
-    "Roth vs Traditional IRA",
-    "retirement calculator",
-    "tax-free growth",
-    "backdoor Roth IRA",
+    "CD calculator",
+    "certificate of deposit calculator",
+    "CD interest calculator",
+    "APY calculator",
+    "CD ladder",
+    "CD vs savings",
+    "certificate of deposit",
+    "maturity value calculator",
   ],
   authors: [{ name: `${SITE_NAME} Team` }],
   creator: SITE_NAME,
@@ -60,21 +60,21 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=4", type: "image/x-icon", sizes: "48x48" },
-      { url: "/favicon.svg?v=4", type: "image/svg+xml" },
-      { url: "/favicon-32x32.png?v=4", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=4", type: "image/png", sizes: "16x16" },
-      { url: "/android-chrome-192x192.png?v=4", type: "image/png", sizes: "192x192" },
-      { url: "/logo-icon-512.png?v=4", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=5", type: "image/x-icon", sizes: "48x48" },
+      { url: "/favicon.svg?v=5", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png?v=5", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png?v=5", type: "image/png", sizes: "16x16" },
+      { url: "/android-chrome-192x192.png?v=5", type: "image/png", sizes: "192x192" },
+      { url: "/logo-icon-512.png?v=5", type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/apple-touch-icon.png?v=4", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon.ico?v=4", type: "image/x-icon" }],
+    apple: [{ url: "/apple-touch-icon.png?v=5", sizes: "180x180" }],
+    shortcut: [{ url: "/favicon.ico?v=5", type: "image/x-icon" }],
   },
   alternates: {
     canonical: SITE_ORIGIN,
   },
   openGraph: {
-    title: "Roth IRA Calculator (2026)",
+    title: "Free CD Calculator — Estimate Certificate of Deposit Earnings",
     description: SITE_TAGLINE,
     url: SITE_ORIGIN,
     siteName: SITE_NAME,
@@ -85,26 +85,26 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Roth IRA Calculator — free retirement growth projections",
+        alt: "CD Calculator — free certificate of deposit earnings tool",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roth IRA Calculator (2026)",
+    title: "Free CD Calculator — Estimate Certificate of Deposit Earnings",
     description: SITE_TAGLINE,
     images: [
       {
         url: TWITTER_IMAGE,
         width: 1200,
-        height: 628,
-        alt: "Roth IRA Calculator — free retirement growth projections",
+        height: 675,
+        alt: "CD Calculator — free certificate of deposit earnings tool",
       },
     ],
   },
   applicationName: SITE_NAME,
   category: "Finance",
-  classification: "Retirement Calculator",
+  classification: "Banking Calculator",
 };
 
 export default function RootLayout({
@@ -117,11 +117,11 @@ export default function RootLayout({
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" sizes="48x48" />
-        <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml" />
-        <link rel="icon" href="/favicon-32x32.png?v=4" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon-16x16.png?v=4" type="image/png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4" sizes="180x180" />
+        <link rel="icon" href="/favicon.ico?v=5" type="image/x-icon" sizes="48x48" />
+        <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png?v=5" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png?v=5" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5" sizes="180x180" />
         <Script id="deferred-manifest" strategy="lazyOnload">
           {`(function(){var l=document.createElement('link');l.rel='manifest';l.href='/manifest.json';document.head.appendChild(l);})();`}
         </Script>

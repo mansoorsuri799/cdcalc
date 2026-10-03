@@ -3,10 +3,10 @@
 import Link from 'next/link';
 
 const categories = [
-  { name: 'Backdoor Roth', href: '/blog/backdoor-roth-ira-explained' },
-  { name: '5-Year Rule', href: '/blog/roth-ira-5-year-rule' },
-  { name: 'Open a Roth IRA', href: '/blog/how-to-open-a-roth-ira' },
-  { name: 'Roth vs 401(k)', href: '/blog/roth-ira-vs-401k' },
+  { name: 'Early Withdrawal', href: '/blog/cd-early-withdrawal-penalty' },
+  { name: 'Brokered CDs', href: '/blog/brokered-cds-explained' },
+  { name: 'APY vs APR', href: '/blog/apy-vs-apr-for-cds' },
+  { name: 'No-Penalty CDs', href: '/blog/no-penalty-cds' },
 ];
 
 export default function BlogCategoryDropdown() {

@@ -26,99 +26,101 @@ const nextConfig = {
         destination: '/about-us',
         permanent: true,
       },
+      // Legacy Roth IRA routes → CD Calculator equivalents
       {
-        source: '/download-card-rummy',
-        destination: '/',
+        source: '/roth-ira-contribution-limits',
+        destination: '/how-cds-work',
         permanent: true,
       },
       {
-        source: '/deposit-money-in-card-rummy',
-        destination: '/roth-ira-contribution-limits',
+        source: '/roth-ira-eligibility',
+        destination: '/how-cds-work',
         permanent: true,
       },
       {
-        source: '/withdraw-money-from-card-rummy',
-        destination: '/blog/roth-ira-5-year-rule',
+        source: '/roth-vs-traditional-ira',
+        destination: '/cd-vs-savings-account',
         permanent: true,
       },
       {
-        source: '/card-rummy-for-pc',
-        destination: '/',
+        source: '/blog/backdoor-roth-ira-explained',
+        destination: '/blog/brokered-cds-explained',
         permanent: true,
       },
       {
-        source: '/blog/create-account-login',
-        destination: '/blog/how-to-open-a-roth-ira',
+        source: '/blog/roth-ira-5-year-rule',
+        destination: '/blog/cd-early-withdrawal-penalty',
         permanent: true,
       },
+      {
+        source: '/blog/how-to-open-a-roth-ira',
+        destination: '/how-cds-work',
+        permanent: true,
+      },
+      {
+        source: '/blog/roth-ira-vs-401k',
+        destination: '/cd-vs-savings-account',
+        permanent: true,
+      },
+      // Legacy asset paths
       {
         source: '/og-image.webp',
-        destination: '/feature/og-image.png',
+        destination: '/feature/og-image-1200x630.webp',
         permanent: true,
       },
       {
         source: '/og-image.png',
-        destination: '/feature/og-image.png',
+        destination: '/feature/og-image-1200x630.webp',
         permanent: true,
       },
       {
         source: '/og-image-square.webp',
-        destination: '/feature/og-image-square.png',
+        destination: '/feature/og-square-1200x1200.webp',
         permanent: true,
       },
       {
         source: '/twitter-card.webp',
-        destination: '/feature/twitter-card.png',
+        destination: '/feature/twitter-card-1200x675.webp',
         permanent: true,
       },
       {
         source: '/twitter-card.png',
-        destination: '/feature/twitter-card.png',
+        destination: '/feature/twitter-card-1200x675.webp',
         permanent: true,
       },
       {
-        source: '/card-rummy.webp',
-        destination: '/logo-mark-512.png',
+        source: '/feature/og-image.png',
+        destination: '/feature/og-image-1200x630.webp',
         permanent: true,
       },
       {
-        source: '/card-rummy-logo.webp',
-        destination: '/logo-mark-512.png',
+        source: '/feature/og-image-square.png',
+        destination: '/feature/og-square-1200x1200.webp',
         permanent: true,
       },
       {
-        source: '/roth-ira-calculator.webp',
-        destination: '/logo-mark-512.png',
+        source: '/feature/twitter-card.png',
+        destination: '/feature/twitter-card-1200x675.webp',
         permanent: true,
       },
       {
-        source: '/roth-ira-calculator-hero.png',
-        destination: '/roth-ira-tax-free-growth.webp',
+        source: '/roth-ira-tax-free-growth.webp',
+        destination: '/hero-cd-calculator.webp',
         permanent: true,
       },
       {
-        source: '/roth-ira-growth-chart.png',
-        destination: '/roth-ira-compound-growth.webp',
+        source: '/roth-ira-compound-growth.webp',
+        destination: '/cd-compound-growth.webp',
         permanent: true,
       },
       {
-        source: '/roth-ira-contributions.png',
-        destination: '/roth-ira-calculator-how-it-works.webp',
+        source: '/roth-ira-calculator-how-it-works.webp',
+        destination: '/how-cds-work.webp',
         permanent: true,
       },
       {
-        source: '/feature/og-image.webp',
-        destination: '/feature/og-image.png',
-        permanent: true,
-      },
-      {
-        source: '/feature/og-image-square.webp',
-        destination: '/feature/og-image-square.png',
-        permanent: true,
-      },
-      {
-        source: '/feature/twitter-card.webp',
-        destination: '/feature/twitter-card.png',
+        source: '/roth-vs-traditional-ira.webp',
+        destination: '/cd-compounding-frequency.webp',
         permanent: true,
       },
     ];
@@ -259,4 +261,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig

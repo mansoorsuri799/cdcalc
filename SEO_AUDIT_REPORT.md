@@ -1,11 +1,8 @@
-# SEO Audit Notes — Roth IRA Calculator
+# SEO Audit Notes — CD Calculator
 
-Rebranded from Card Rummy to Roth IRA Calculator (rothiracalc.net).
-
-Checklist:
-- [x] Unique title vs H1 on homepage
-- [x] Calculator in hero
-- [x] 2026 IRS limit tables
-- [x] 4 SERP-driven blogs only
-- [x] Sitemap index + image sitemap + Content-Signal robots
-- [x] Breadcrumbs + FAQ schema on key pages
+- Canonical host: `https://cdcalc.net`
+- Sitemap index: `/sitemap-index.xml`
+- Robots: Content-Signal + AI bot blocks; sitemap points to cdcalc.net
+- Homepage: unique title vs H1, WebApplication + HowTo + FAQ schema
+- Images: CD-named WebP assets in `/public` with descriptive alts
+- Legacy Roth IRA URLs permanently redirect to CD equivalents

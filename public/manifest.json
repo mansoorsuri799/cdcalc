@@ -1,7 +1,7 @@
 {
-  "name": "Roth IRA Calculator",
-  "short_name": "RothIRA Calc",
-  "description": "Free Roth IRA calculator with 2026 contribution limits, MAGI eligibility, and Roth vs taxable projections.",
+  "name": "CD Calculator",
+  "short_name": "CD Calc",
+  "description": "Free CD calculator with APY/APR compounding, tax estimates, and maturity schedules.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#05070c",

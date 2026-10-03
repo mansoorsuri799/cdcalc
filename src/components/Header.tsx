@@ -8,9 +8,9 @@ import { BRAND_LOGO, SITE_NAME } from '@/lib/siteConfig';
 
 const navLinks = [
   { href: '/', label: 'Calculator' },
-  { href: '/roth-ira-contribution-limits', label: 'Limits' },
-  { href: '/roth-ira-eligibility', label: 'Eligibility' },
-  { href: '/roth-vs-traditional-ira', label: 'Roth vs Traditional' },
+  { href: '/how-cds-work', label: 'How CDs Work' },
+  { href: '/cd-ladder', label: 'CD Ladder' },
+  { href: '/cd-vs-savings-account', label: 'CD vs Savings' },
   { href: '/about-us', label: 'About' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact-us', label: 'Contact' },
@@ -31,7 +31,7 @@ export default function Header() {
           <div className="relative h-8 w-8 sm:h-9 sm:w-9 mr-2 flex-shrink-0">
             <Image
               src={BRAND_LOGO}
-              alt="Roth IRA Calculator logo"
+              alt="CD Calculator logo"
               width={40}
               height={40}
               className="object-contain"

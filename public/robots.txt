@@ -63,4 +63,4 @@ User-agent: *
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://rothiracalc.net/sitemap-index.xml
+Sitemap: https://cdcalc.net/sitemap-index.xml

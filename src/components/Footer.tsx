@@ -21,10 +21,10 @@ export default function Footer() {
           <div>
             <h2 className="text-lg font-semibold mb-4 text-accent">Quick Links</h2>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="text-gray-300 hover:text-accent transition-colors">Roth IRA Calculator</Link></li>
-              <li><Link href="/roth-ira-contribution-limits" className="text-gray-300 hover:text-accent transition-colors">Contribution Limits</Link></li>
-              <li><Link href="/roth-ira-eligibility" className="text-gray-300 hover:text-accent transition-colors">Eligibility & Income Limits</Link></li>
-              <li><Link href="/roth-vs-traditional-ira" className="text-gray-300 hover:text-accent transition-colors">Roth vs Traditional IRA</Link></li>
+              <li><Link href="/" className="text-gray-300 hover:text-accent transition-colors">CD Calculator</Link></li>
+              <li><Link href="/how-cds-work" className="text-gray-300 hover:text-accent transition-colors">How CDs Work</Link></li>
+              <li><Link href="/cd-ladder" className="text-gray-300 hover:text-accent transition-colors">CD Ladder</Link></li>
+              <li><Link href="/cd-vs-savings-account" className="text-gray-300 hover:text-accent transition-colors">CD vs Savings</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-accent transition-colors">Blog</Link></li>
               <li><Link href="/about-us" className="text-gray-300 hover:text-accent transition-colors">About Us</Link></li>
             </ul>
@@ -33,10 +33,10 @@ export default function Footer() {
           <div>
             <h2 className="text-lg font-semibold mb-4 text-accent">Resources</h2>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/blog/backdoor-roth-ira-explained" className="text-gray-300 hover:text-accent transition-colors">Backdoor Roth IRA</Link></li>
-              <li><Link href="/blog/roth-ira-5-year-rule" className="text-gray-300 hover:text-accent transition-colors">5-Year Rule</Link></li>
-              <li><Link href="/blog/how-to-open-a-roth-ira" className="text-gray-300 hover:text-accent transition-colors">How to Open a Roth IRA</Link></li>
-              <li><Link href="/blog/roth-ira-vs-401k" className="text-gray-300 hover:text-accent transition-colors">Roth IRA vs 401(k)</Link></li>
+              <li><Link href="/blog/cd-early-withdrawal-penalty" className="text-gray-300 hover:text-accent transition-colors">Early Withdrawal Penalty</Link></li>
+              <li><Link href="/blog/brokered-cds-explained" className="text-gray-300 hover:text-accent transition-colors">Brokered CDs</Link></li>
+              <li><Link href="/blog/apy-vs-apr-for-cds" className="text-gray-300 hover:text-accent transition-colors">APY vs APR</Link></li>
+              <li><Link href="/blog/no-penalty-cds" className="text-gray-300 hover:text-accent transition-colors">No-Penalty CDs</Link></li>
               <li><Link href="/privacy" className="text-gray-300 hover:text-accent transition-colors">Privacy Policy</Link></li>
               <li><Link href="/disclaimer" className="text-gray-300 hover:text-accent transition-colors">Disclaimer</Link></li>
             </ul>
@@ -45,9 +45,9 @@ export default function Footer() {
           <div>
             <h2 className="text-lg font-semibold mb-4 text-accent">Try the Tool</h2>
             <p className="text-sm text-gray-300 mb-4">
-              Run a free projection with 2026 contribution limits, MAGI eligibility, and a Roth vs taxable comparison.
+              Run a free projection with APY or APR compounding, tax impact, and a maturity schedule.
             </p>
-            <CtaButton href="/#calculator" ariaLabel="Open the Roth IRA calculator">
+            <CtaButton href="/#calculator" ariaLabel="Open the CD calculator">
               OPEN CALCULATOR
             </CtaButton>
           </div>

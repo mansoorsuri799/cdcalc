@@ -23,9 +23,9 @@ const navSections: NavSection[] = [
     title: 'MAIN',
     items: [
       { href: '/', label: 'Calculator' },
-      { href: '/roth-ira-contribution-limits', label: 'Contribution Limits' },
-      { href: '/roth-ira-eligibility', label: 'Eligibility' },
-      { href: '/roth-vs-traditional-ira', label: 'Roth vs Traditional' },
+      { href: '/how-cds-work', label: 'How CDs Work' },
+      { href: '/cd-ladder', label: 'CD Ladder' },
+      { href: '/cd-vs-savings-account', label: 'CD vs Savings' },
     ],
   },
   {

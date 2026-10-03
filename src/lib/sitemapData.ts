@@ -8,7 +8,7 @@ export type SitemapPage = {
   images?: Array<{ loc: string; title: string; caption: string }>;
 };
 
-const LASTMOD = "2026-10-03";
+const LASTMOD = "2026-10-04";
 
 export const SITEMAP_PAGES: SitemapPage[] = [
   {
@@ -19,50 +19,57 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     images: [
       {
         loc: `${SITE_ORIGIN}/logo-mark-512.png`,
-        title: "Roth IRA Calculator logo",
-        caption: "Free Roth IRA Calculator brand mark for tax-free retirement projections",
+        title: "CD Calculator logo",
+        caption: "Free CD Calculator brand mark for certificate of deposit projections",
       },
       {
-        loc: `${SITE_ORIGIN}/roth-ira-tax-free-growth.webp`,
-        title: "Roth IRA tax-free growth illustration",
-        caption: "Illustration of tax-free Roth IRA compound growth on the calculator homepage",
+        loc: `${SITE_ORIGIN}/hero-cd-calculator.webp`,
+        title: "CD Calculator hero illustration",
+        caption: "Homepage visual for estimating certificate of deposit earnings",
       },
       {
-        loc: `${SITE_ORIGIN}/roth-ira-compound-growth.webp`,
-        title: "Roth IRA compound growth chart",
-        caption: "Visual comparing long-term Roth IRA compounding versus taxable growth",
+        loc: `${SITE_ORIGIN}/cd-compound-growth.webp`,
+        title: "CD compound growth chart",
+        caption: "Visual of CD interest compounding to maturity",
       },
     ],
   },
   {
-    path: "/roth-ira-contribution-limits",
+    path: "/how-cds-work",
     lastMod: LASTMOD,
     changeFreq: "weekly",
     priority: 0.9,
     images: [
       {
-        loc: `${SITE_ORIGIN}/roth-ira-calculator-how-it-works.webp`,
-        title: "How the Roth IRA calculator works",
-        caption: "Step visual for using contribution and growth assumptions in the Roth IRA calculator",
+        loc: `${SITE_ORIGIN}/how-cds-work.webp`,
+        title: "How certificates of deposit work",
+        caption: "Step visual explaining CD deposits, interest, and maturity",
       },
     ],
   },
   {
-    path: "/roth-ira-eligibility",
-    lastMod: LASTMOD,
-    changeFreq: "weekly",
-    priority: 0.9,
-  },
-  {
-    path: "/roth-vs-traditional-ira",
+    path: "/cd-ladder",
     lastMod: LASTMOD,
     changeFreq: "weekly",
     priority: 0.9,
     images: [
       {
-        loc: `${SITE_ORIGIN}/roth-vs-traditional-ira.webp`,
-        title: "Roth IRA vs Traditional IRA comparison",
-        caption: "Side-by-side visual comparing Roth IRA and Traditional IRA retirement paths",
+        loc: `${SITE_ORIGIN}/cd-maturity-timeline.webp`,
+        title: "CD ladder maturity timeline",
+        caption: "Illustration of staggered CD maturities in a ladder strategy",
+      },
+    ],
+  },
+  {
+    path: "/cd-vs-savings-account",
+    lastMod: LASTMOD,
+    changeFreq: "weekly",
+    priority: 0.9,
+    images: [
+      {
+        loc: `${SITE_ORIGIN}/cd-compounding-frequency.webp`,
+        title: "CD versus savings compounding",
+        caption: "Comparison visual for CD rates versus high-yield savings liquidity",
       },
     ],
   },
@@ -74,8 +81,8 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     images: [
       {
         loc: `${SITE_ORIGIN}/logo-512.png`,
-        title: "About Roth IRA Calculator",
-        caption: "Roth IRA Calculator brand logo used on the About page",
+        title: "About CD Calculator",
+        caption: "CD Calculator brand logo used on the About page",
       },
     ],
   },
@@ -86,25 +93,25 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.8,
   },
   {
-    path: "/blog/backdoor-roth-ira-explained",
+    path: "/blog/cd-early-withdrawal-penalty",
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.75,
   },
   {
-    path: "/blog/roth-ira-5-year-rule",
+    path: "/blog/brokered-cds-explained",
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.75,
   },
   {
-    path: "/blog/how-to-open-a-roth-ira",
+    path: "/blog/apy-vs-apr-for-cds",
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.75,
   },
   {
-    path: "/blog/roth-ira-vs-401k",
+    path: "/blog/no-penalty-cds",
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.75,

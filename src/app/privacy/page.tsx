@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       <div className="space-y-5 text-gray-300 leading-relaxed">
         <p>
           {SITE_NAME} ({SITE_DOMAIN}) respects your privacy. This policy explains what information we
-          collect and how we use it when you visit our website or use the Roth IRA calculator.
+          collect and how we use it when you visit our website or use the CD calculator.
         </p>
         <h2 className="text-xl font-semibold text-accent">Information we collect</h2>
         <p>
@@ -45,9 +45,8 @@ export default function PrivacyPage() {
           <a href={`mailto:${CONTACT_EMAIL}`} className="text-accent hover:underline">
             {CONTACT_EMAIL}
           </a>
-          .
         </p>
-        <p className="text-sm text-gray-500">Last updated: October 3, 2026</p>
+        <p className="text-sm text-gray-500">Last updated: October 4, 2026</p>
       </div>
     </div>
   );

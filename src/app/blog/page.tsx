@@ -4,13 +4,13 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Roth IRA Blog — Guides on Limits, Withdrawals & Strategy",
+  title: "CD Calculator Blog — Penalties, Brokered CDs & Rate Guides",
   description:
-    "Practical Roth IRA articles on the backdoor Roth, 5-year rule, opening an account, and Roth IRA vs 401(k).",
+    "Practical certificate of deposit articles on early withdrawal penalties, brokered CDs, APY vs APR, and no-penalty CDs.",
   alternates: { canonical: `${SITE_ORIGIN}/blog` },
   openGraph: {
-    title: "Roth IRA Blog — Guides on Limits, Withdrawals & Strategy",
-    description: "Educational Roth IRA guides from RothIRA Calc.",
+    title: "CD Calculator Blog — Penalties, Brokered CDs & Rate Guides",
+    description: "Educational CD guides from CD Calculator.",
     url: `${SITE_ORIGIN}/blog`,
     siteName: SITE_NAME,
     type: "website",
@@ -19,36 +19,36 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    href: "/blog/backdoor-roth-ira-explained",
-    title: "Backdoor Roth IRA Explained",
+    href: "/blog/cd-early-withdrawal-penalty",
+    title: "CD Early Withdrawal Penalty Explained",
     excerpt:
-      "How high earners use nondeductible Traditional IRA contributions and conversions when direct Roth contributions are blocked.",
+      "How penalties are calculated, when breaking a CD can still make sense, and what to check in the account disclosure.",
+    date: "October 2026",
+    read: "8 min read",
+  },
+  {
+    href: "/blog/brokered-cds-explained",
+    title: "Brokered CDs Explained",
+    excerpt:
+      "Bank CD vs brokered CD differences: how you buy them, secondary-market pricing, call features, and insurance basics.",
     date: "October 2026",
     read: "9 min read",
   },
   {
-    href: "/blog/roth-ira-5-year-rule",
-    title: "Roth IRA 5-Year Rule & Withdrawals",
+    href: "/blog/apy-vs-apr-for-cds",
+    title: "APY vs APR for CDs",
     excerpt:
-      "Learn when earnings become qualified, how multiple five-year clocks work, and what happens if you withdraw early.",
-    date: "October 2026",
-    read: "8 min read",
-  },
-  {
-    href: "/blog/how-to-open-a-roth-ira",
-    title: "How to Open a Roth IRA",
-    excerpt:
-      "A step-by-step walkthrough for choosing a provider, funding the account, and investing your first contribution.",
+      "Why the same number can mean different earnings, and which label to enter in the CD calculator.",
     date: "October 2026",
     read: "7 min read",
   },
   {
-    href: "/blog/roth-ira-vs-401k",
-    title: "Roth IRA vs 401(k)",
+    href: "/blog/no-penalty-cds",
+    title: "No-Penalty CDs: Flexible Rate Locks",
     excerpt:
-      "Compare contribution room, employer matches, investment menus, and tax treatment so you can prioritize the right dollars.",
+      "How no-penalty CDs work, typical waiting periods, and when they beat both traditional CDs and savings accounts.",
     date: "October 2026",
-    read: "8 min read",
+    read: "7 min read",
   },
 ];
 
@@ -56,9 +56,9 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-10 max-w-5xl">
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
-      <h1 className="text-3xl md:text-4xl font-bold text-accent mb-3">Roth IRA Blog</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-accent mb-3">CD Calculator Blog</h1>
       <p className="text-gray-300 text-lg mb-10">
-        Focused guides that support the calculator—no filler topics, only high-intent Roth IRA questions
+        Focused guides that support the calculator—only high-intent certificate of deposit questions
         people actually search.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

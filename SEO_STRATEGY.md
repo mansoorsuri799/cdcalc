@@ -1,15 +1,22 @@
-# SEO Strategy — Roth IRA Calculator
+# SEO Strategy — CD Calculator (cdcalc.net)
 
-Primary keyword: Roth IRA calculator  
-Domain: https://rothiracalc.net
+## Primary keyword
+CD calculator / certificate of deposit calculator
 
-## Targets
-- Home tool + education for “Roth IRA calculator”
-- Guides: contribution limits, eligibility, Roth vs Traditional
-- Blogs: backdoor Roth, 5-year rule, how to open, Roth vs 401(k)
+## Core IA
+| Route | Intent |
+|---|---|
+| `/` | Tool + commercial investigation |
+| `/how-cds-work` | Informational basics |
+| `/cd-ladder` | Strategy guide |
+| `/cd-vs-savings-account` | Comparison |
+| `/blog/cd-early-withdrawal-penalty` | Penalty research |
+| `/blog/brokered-cds-explained` | Product education |
+| `/blog/apy-vs-apr-for-cds` | Rate literacy |
+| `/blog/no-penalty-cds` | Flexible CD research |
 
 ## Differentiators
-- Working calculator with MAGI eligibility in-tool
-- Multi-page IA (not one skyscraper page)
-- FAQ / HowTo / WebApplication schema
-- Custom trust pages and branded OG metadata
+- Working calculator first (APY/APR modes, tax estimate, schedules)
+- Multi-page IA instead of one skyscraper
+- FAQ + HowTo + WebApplication schema
+- Custom trust pages (About / Privacy / Disclaimer / Contact)
