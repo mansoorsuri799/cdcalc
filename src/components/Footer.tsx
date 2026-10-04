@@ -55,7 +55,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-8 pt-4 pb-3 text-center text-sm text-zinc-500">
           <p className="mb-0">
-            © {new Date().getFullYear()} {SITE_NAME}. All rights reserved. |{' '}
+            © 2026 {SITE_NAME}. All rights reserved. |{' '}
             <Link href="/" className="hover:text-accent">{SITE_DOMAIN}</Link>
           </p>
         </div>

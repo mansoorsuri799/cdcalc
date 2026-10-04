@@ -1,5 +1,9 @@
 import { SITE_ORIGIN } from "@/lib/siteConfig";
 
+function imageLoc(path: string): string {
+  return `${SITE_ORIGIN}${path}`;
+}
+
 export type SitemapPage = {
   path: string;
   lastMod: string;
@@ -18,18 +22,18 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 1,
     images: [
       {
-        loc: `${SITE_ORIGIN}/logo-mark-512.png`,
+        loc: imageLoc("/favicon-512x512.png"),
         title: "CD Calculator logo",
         caption: "Free CD Calculator brand mark for certificate of deposit projections",
       },
       {
-        loc: `${SITE_ORIGIN}/hero-cd-calculator.webp`,
+        loc: imageLoc("/hero-cd-calculator.webp"),
         title: "CD Calculator hero illustration",
         caption: "Homepage visual for estimating certificate of deposit earnings",
       },
       {
-        loc: `${SITE_ORIGIN}/cd-compound-growth.webp`,
-        title: "CD compound growth chart",
+        loc: imageLoc("/cd-interest-growth.webp"),
+        title: "CD interest growth chart",
         caption: "Visual of CD interest compounding to maturity",
       },
     ],
@@ -41,9 +45,9 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.9,
     images: [
       {
-        loc: `${SITE_ORIGIN}/how-cds-work.webp`,
-        title: "How certificates of deposit work",
-        caption: "Step visual explaining CD deposits, interest, and maturity",
+        loc: imageLoc("/how-a-cd-works.webp"),
+        title: "How a certificate of deposit works",
+        caption: "Step visual explaining CD deposits, fixed rates, interest, and maturity",
       },
     ],
   },
@@ -54,8 +58,8 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.9,
     images: [
       {
-        loc: `${SITE_ORIGIN}/cd-maturity-timeline.webp`,
-        title: "CD ladder maturity timeline",
+        loc: imageLoc("/cd-ladder-strategy.webp"),
+        title: "CD ladder strategy illustration",
         caption: "Illustration of staggered CD maturities in a ladder strategy",
       },
     ],
@@ -67,7 +71,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.9,
     images: [
       {
-        loc: `${SITE_ORIGIN}/cd-compounding-frequency.webp`,
+        loc: imageLoc("/cd-compounding-frequency.webp"),
         title: "CD versus savings compounding",
         caption: "Comparison visual for CD rates versus high-yield savings liquidity",
       },
@@ -80,7 +84,7 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     priority: 0.7,
     images: [
       {
-        loc: `${SITE_ORIGIN}/logo-512.png`,
+        loc: imageLoc("/android-chrome-512x512.png"),
         title: "About CD Calculator",
         caption: "CD Calculator brand logo used on the About page",
       },
@@ -97,6 +101,13 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.75,
+    images: [
+      {
+        loc: imageLoc("/cd-early-withdrawal-penalty.webp"),
+        title: "CD early withdrawal penalty guide image",
+        caption: "Visual explaining certificate of deposit early withdrawal penalties",
+      },
+    ],
   },
   {
     path: "/blog/brokered-cds-explained",
@@ -109,6 +120,13 @@ export const SITEMAP_PAGES: SitemapPage[] = [
     lastMod: LASTMOD,
     changeFreq: "monthly",
     priority: 0.75,
+    images: [
+      {
+        loc: imageLoc("/cd-interest-formula.webp"),
+        title: "CD interest and APY formula visual",
+        caption: "Illustration supporting APY versus APR explanations for CDs",
+      },
+    ],
   },
   {
     path: "/blog/no-penalty-cds",

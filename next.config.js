@@ -17,6 +17,7 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     qualities: [75, 80, 90, 100],
+    minimumCacheTTL: 0,
   },
 
   async redirects() {
@@ -110,17 +111,52 @@ const nextConfig = {
       },
       {
         source: '/roth-ira-compound-growth.webp',
-        destination: '/cd-compound-growth.webp',
+        destination: '/cd-interest-growth.webp',
         permanent: true,
       },
       {
         source: '/roth-ira-calculator-how-it-works.webp',
-        destination: '/how-cds-work.webp',
+        destination: '/how-a-cd-works.webp',
         permanent: true,
       },
       {
         source: '/roth-vs-traditional-ira.webp',
         destination: '/cd-compounding-frequency.webp',
+        permanent: true,
+      },
+      {
+        source: '/cd-compound-growth.webp',
+        destination: '/cd-interest-growth.webp',
+        permanent: true,
+      },
+      {
+        source: '/how-cds-work.webp',
+        destination: '/how-a-cd-works.webp',
+        permanent: true,
+      },
+      {
+        source: '/cd-maturity-timeline.webp',
+        destination: '/cd-ladder-strategy.webp',
+        permanent: true,
+      },
+      {
+        source: '/logo-icon-512.png',
+        destination: '/favicon-512x512.png',
+        permanent: true,
+      },
+      {
+        source: '/logo-mark-512.png',
+        destination: '/android-chrome-512x512.png',
+        permanent: true,
+      },
+      {
+        source: '/logo-512.png',
+        destination: '/favicon-512x512.png',
+        permanent: true,
+      },
+      {
+        source: '/logo-horizontal-white.png',
+        destination: '/maskable-icon-512x512.png',
         permanent: true,
       },
     ];
@@ -210,13 +246,31 @@ const nextConfig = {
           },
         ],
       },
-      // Public images: long cache but allow revalidation
+      // Public images: cache briefly and always revalidate so replacements show up
       {
         source: '/:path*.webp',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=2592000, stale-while-revalidate=86400',
+            value: 'public, max-age=0, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:path*.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/:path*.svg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
           },
         ],
       },
@@ -238,7 +292,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age=0, must-revalidate',
           },
         ],
       },

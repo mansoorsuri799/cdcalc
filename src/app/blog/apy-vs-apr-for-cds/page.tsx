@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BlogPostSchema from "@/components/BlogPostSchema";
 import CtaButton from "@/components/CtaButton";
-import { OG_IMAGE, SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
+import { BRAND_FORMULA, OG_IMAGE, SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
 
 const title = "APY vs APR for CDs";
 const description =
@@ -33,7 +34,7 @@ export default function ApyVsAprPage() {
         description={description}
         slug={slug}
         datePublished={datePublished}
-        image={`${SITE_ORIGIN}${OG_IMAGE}`}
+        image={`${SITE_ORIGIN}${BRAND_FORMULA}`}
       />
       <Breadcrumbs
         items={[
@@ -45,6 +46,17 @@ export default function ApyVsAprPage() {
 
       <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{title}</h1>
       <p className="text-sm text-gray-500 mb-8">Updated {datePublished} · 7 min read</p>
+
+      <div className="relative mb-8 aspect-video w-full overflow-hidden rounded-xl border border-white/10 bg-secondary">
+        <Image
+          src={BRAND_FORMULA}
+          alt="Visual comparing CD interest rate labels and how compounding affects APY"
+          fill
+          sizes="(max-width: 768px) 100vw, 768px"
+          className="object-cover"
+          priority
+        />
+      </div>
 
       <p className="text-gray-300 leading-relaxed mb-6">
         Banks advertise CD yields with precise language for a reason. APY and APR are not the same

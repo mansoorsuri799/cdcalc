@@ -10,6 +10,7 @@ import DeferredAnalytics from "@/components/DeferredAnalytics";
 import { MobileMenuProvider } from "@/components/MobileMenuProvider";
 import { ORGANIZATION_JSON_LD } from "@/lib/appFacts";
 import {
+  ASSET_VERSION,
   OG_IMAGE,
   SITE_NAME,
   SITE_ORIGIN,
@@ -60,15 +61,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico?v=5", type: "image/x-icon", sizes: "48x48" },
-      { url: "/favicon.svg?v=5", type: "image/svg+xml" },
-      { url: "/favicon-32x32.png?v=5", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png?v=5", type: "image/png", sizes: "16x16" },
-      { url: "/android-chrome-192x192.png?v=5", type: "image/png", sizes: "192x192" },
-      { url: "/logo-icon-512.png?v=5", type: "image/png", sizes: "512x512" },
+      { url: `/favicon.ico?v=${ASSET_VERSION}`, type: "image/x-icon", sizes: "48x48" },
+      { url: `/favicon.svg?v=${ASSET_VERSION}`, type: "image/svg+xml" },
+      { url: `/favicon-32x32.png?v=${ASSET_VERSION}`, type: "image/png", sizes: "32x32" },
+      { url: `/favicon-16x16.png?v=${ASSET_VERSION}`, type: "image/png", sizes: "16x16" },
+      { url: `/android-chrome-192x192.png?v=${ASSET_VERSION}`, type: "image/png", sizes: "192x192" },
+      { url: `/favicon-512x512.png?v=${ASSET_VERSION}`, type: "image/png", sizes: "512x512" },
     ],
-    apple: [{ url: "/apple-touch-icon.png?v=5", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon.ico?v=5", type: "image/x-icon" }],
+    apple: [{ url: `/apple-touch-icon.png?v=${ASSET_VERSION}`, sizes: "180x180" }],
+    shortcut: [{ url: `/favicon.ico?v=${ASSET_VERSION}`, type: "image/x-icon" }],
   },
   alternates: {
     canonical: SITE_ORIGIN,
@@ -117,13 +118,16 @@ export default function RootLayout({
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="icon" href="/favicon.ico?v=5" type="image/x-icon" sizes="48x48" />
-        <link rel="icon" href="/favicon.svg?v=5" type="image/svg+xml" />
-        <link rel="icon" href="/favicon-32x32.png?v=5" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon-16x16.png?v=5" type="image/png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=5" sizes="180x180" />
+        <link rel="icon" href={`/favicon.ico?v=${ASSET_VERSION}`} type="image/x-icon" sizes="48x48" />
+        <link rel="icon" href={`/favicon.svg?v=${ASSET_VERSION}`} type="image/svg+xml" />
+        <link rel="icon" href={`/favicon-32x32.png?v=${ASSET_VERSION}`} type="image/png" sizes="32x32" />
+        <link rel="icon" href={`/favicon-16x16.png?v=${ASSET_VERSION}`} type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href={`/apple-touch-icon.png?v=${ASSET_VERSION}`} sizes="180x180" />
+        <Script id="strip-extension-attrs" strategy="beforeInteractive">
+          {`(function(){var ATTR="bis_skin_checked";function strip(n){if(!n||n.nodeType!==1)return;if(n.hasAttribute&&n.hasAttribute(ATTR))n.removeAttribute(ATTR);var list=n.querySelectorAll?n.querySelectorAll("["+ATTR+"]"):[];for(var i=0;i<list.length;i++)list[i].removeAttribute(ATTR);}strip(document.documentElement);try{new MutationObserver(function(ms){for(var i=0;i<ms.length;i++){if(ms[i].type==="attributes")strip(ms[i].target);var nodes=ms[i].addedNodes;if(nodes){for(var j=0;j<nodes.length;j++)strip(nodes[j]);}}}).observe(document.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:[ATTR]});}catch(e){}})();`}
+        </Script>
         <Script id="deferred-manifest" strategy="lazyOnload">
-          {`(function(){var l=document.createElement('link');l.rel='manifest';l.href='/manifest.json';document.head.appendChild(l);})();`}
+          {`(function(){var l=document.createElement('link');l.rel='manifest';l.href='/manifest.json?v=${ASSET_VERSION}';document.head.appendChild(l);})();`}
         </Script>
       </head>
       <body

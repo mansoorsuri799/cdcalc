@@ -33,9 +33,11 @@ export default function FaqSection({
           >
             <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-white flex items-center justify-between gap-4">
               <span>{item.question}</span>
-              <span className="text-accent transition group-open:rotate-45 text-xl leading-none">+</span>
+              <span className="text-accent transition group-open:rotate-45 text-xl leading-none" aria-hidden="true">
+                +
+              </span>
             </summary>
-            <div className="px-5 pb-4 text-gray-300 leading-relaxed">{item.answer}</div>
+            <p className="px-5 pb-4 text-gray-300 leading-relaxed">{item.answer}</p>
           </details>
         ))}
       </div>

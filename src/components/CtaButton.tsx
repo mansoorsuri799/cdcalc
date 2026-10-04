@@ -51,9 +51,9 @@ function ButtonInner({
   return (
     <>
       <span className="text-left leading-tight">{children}</span>
-      <div className="download-icon ml-3 bg-accent rounded-full p-2 group-hover:scale-110 transition-transform text-black">
+      <span className="download-icon ml-3 inline-flex bg-accent rounded-full p-2 group-hover:scale-110 transition-transform text-black">
         {ICONS[icon]}
-      </div>
+      </span>
     </>
   );
 }

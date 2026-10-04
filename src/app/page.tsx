@@ -213,10 +213,11 @@ export default function Home() {
             <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-secondary">
               <Image
                 src={BRAND_FORMULA}
-                alt="Visual explaining the certificate of deposit interest formula used by the CD calculator"
+                alt="CD interest formula visual showing how maturity balance is calculated"
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
                 className="object-cover"
+                priority
               />
             </div>
           </section>
@@ -320,7 +321,7 @@ export default function Home() {
             <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-secondary mb-4">
               <Image
                 src={BRAND_FREQUENCY}
-                alt="Illustration of CD compounding frequency options from annual to daily"
+                alt="Illustration comparing CD compounding frequency options and APY impact"
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
                 className="object-cover"
@@ -351,7 +352,7 @@ export default function Home() {
             <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-secondary mb-4">
               <Image
                 src={BRAND_GROWTH}
-                alt="Growth comparison visual for CD compounding versus liquid savings"
+                alt="Chart showing certificate of deposit interest growth to maturity"
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
                 className="object-cover"
@@ -404,17 +405,16 @@ export default function Home() {
             <div className="relative w-full max-w-2xl aspect-video mx-auto rounded-xl overflow-hidden border border-white/10 bg-secondary mb-4">
               <Image
                 src={BRAND_HERO}
-                alt="CD Calculator visual showing certificate of deposit growth to maturity"
+                alt="CD Calculator hero showing balance at maturity with compound interest growth"
                 fill
                 sizes="(max-width: 768px) 100vw, 672px"
                 className="object-cover"
-                priority
               />
             </div>
             <div className="relative w-full max-w-2xl aspect-video mx-auto rounded-xl overflow-hidden border border-white/10 bg-secondary">
               <Image
                 src={BRAND_HOW_IT_WORKS}
-                alt="Step illustration of how certificate of deposit interest accrues over a term"
+                alt="Four-step guide showing how a certificate of deposit works from deposit to maturity"
                 fill
                 sizes="(max-width: 768px) 100vw, 672px"
                 className="object-cover"

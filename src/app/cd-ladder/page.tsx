@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaButton from "@/components/CtaButton";
 import FaqSection from "@/components/FaqSection";
-import { BRAND_MATURITY, OG_IMAGE, SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
+import { BRAND_LADDER, OG_IMAGE, SITE_NAME, SITE_ORIGIN } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "CD Ladder Guide — How to Build One Step by Step",
@@ -68,8 +68,8 @@ export default function CdLadderPage() {
 
       <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-secondary mb-10">
         <Image
-          src={BRAND_MATURITY}
-          alt="Staggered CD maturity timeline illustrating a certificate of deposit ladder"
+          src={BRAND_LADDER}
+          alt="CD ladder strategy chart splitting cash across one- to five-year CDs"
           fill
           sizes="(max-width: 768px) 100vw, 896px"
           className="object-cover"

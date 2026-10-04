@@ -6,7 +6,7 @@ import CtaButton from "@/components/CtaButton";
 import FaqSection from "@/components/FaqSection";
 import {
   BRAND_HOW_IT_WORKS,
-  BRAND_MATURITY,
+  BRAND_LADDER,
   OG_IMAGE,
   SITE_NAME,
   SITE_ORIGIN,
@@ -79,7 +79,7 @@ export default function HowCdsWorkPage() {
       <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-secondary mb-10">
         <Image
           src={BRAND_HOW_IT_WORKS}
-          alt="Diagram showing how a certificate of deposit moves from deposit to maturity"
+          alt="How a CD works: deposit money, lock rate and term, earn interest, then mature"
           fill
           sizes="(max-width: 768px) 100vw, 896px"
           className="object-cover"
@@ -136,8 +136,8 @@ export default function HowCdsWorkPage() {
         </ol>
         <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-white/10 bg-secondary mt-6">
           <Image
-            src={BRAND_MATURITY}
-            alt="Timeline of CD key dates from funding through maturity and renewal"
+            src={BRAND_LADDER}
+            alt="CD ladder strategy showing staggered maturities after a CD reaches term"
             fill
             sizes="(max-width: 768px) 100vw, 896px"
             className="object-cover"
